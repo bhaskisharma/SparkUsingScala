@@ -1,9 +1,10 @@
 package utils
 
-import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
 
 trait Context {
+
+  System.setProperty("hadoop.home.dir", "C:/hadoop")
 
   lazy val sparkSession: SparkSession = SparkSession
     .builder()
